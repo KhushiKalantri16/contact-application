@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <h2>Login</h2>
+    <form (ngSubmit)="onLogin()">
+      <div class="mb-3">
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="email" name="email" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label>Password:</label>
+        <input type="password" [(ngModel)]="password" name="password" class="form-control" required />
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    
+    <p>Don't have an account?</p>
+    <button class="btn btn-success mt-2" (click)="onRegister()">Register</button>  
+</div>
+    
+  

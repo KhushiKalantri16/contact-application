@@ -1,0 +1,19 @@
+<div class="container mt-5">
+    <h2>Add Contact</h2>
+    <form (ngSubmit)="addContact()">
+      <div class="mb-3">
+        <label>Name:</label>
+        <input type="text" [(ngModel)]="name" name="name" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label>Email:</label>
+        <input type="email" [(ngModel)]="email" name="email" class="form-control" required />
+      </div>
+      <div class="mb-3">
+        <label>Phone:</label>
+        <input type="text" [(ngModel)]="phone" name="phone" class="form-control" required />
+      </div>
+      <button type="submit" class="btn btn-success">Add Contact</button>
+    </form>
+  </div>
+  

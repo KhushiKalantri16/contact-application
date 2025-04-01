@@ -1,0 +1,19 @@
+<form (ngSubmit)="updateProfile()">
+    <div class="mb-3">
+      <label>Name:</label>
+      <input type="text" [(ngModel)]="profileData.name" name="name" class="form-control" required />
+    </div>
+  
+    <div class="mb-3">
+      <label>Email:</label>
+      <input type="email" [(ngModel)]="profileData.email" name="email" class="form-control" required disabled />
+    </div>
+  
+    <div class="mb-3">
+      <label>Phone:</label>
+      <input type="text" [(ngModel)]="profileData.phone" name="phone" class="form-control" required />
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Update Profile</button>
+  </form>
+  

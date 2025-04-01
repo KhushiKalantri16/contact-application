@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <h2>Contact List</h2>
+    <button class="btn btn-primary mb-3" (click)="addContact()">Add Contact</button>
+  
+    <button class="btn btn-danger mb-3 ms-2" (click)="deleteAllContacts()">Delete All Contacts</button>
+
+    <button class="btn btn-warning mb-3" routerLink="/update-profile">Update Profile</button>
+
+    <table *ngIf="contacts.length > 0" class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let contact of contacts">
+          <td>{{ contact.name }}</td>
+          <td>{{ contact.email }}</td>
+          <td>{{ contact.phone }}</td>
+          <td>
+            <button class="btn btn-warning btn-sm me-2" (click)="updateContact(contact)">Update</button>
+            <button class="btn btn-danger btn-sm" (click)="deleteContact(contact.id)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
